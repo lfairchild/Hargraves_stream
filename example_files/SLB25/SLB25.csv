@@ -1,0 +1,17 @@
+,site_info,,,,,,,,,,,,,,,,,,,,,
+site_id,SLB25,,,,,,,,,,,,,,,,,,,,,
+site_name,Schroeder_Lutsen basalt ,,,,,,,,,,,,,,,,,,,,,
+site_lat,47.52719,(?N),,,,,,,,,,,,,,,,,,,,
+site_long,-90.93106,(?E),,,,,,Sun Compass Information,,,,,,,,,Calculated Fields,,,,,
+site_elevation,0.0,,,,,,,,,,,,,,,,,,,,,
+sample_name,comment,strat_level,magnetic_core_strike,core_dip,bedding_strike,bedding_dip,correct_bedding_using_local_dec,shadow_angle,GMT_offset,year,month,days,hours,minutes,mass,runs,sun_core_strike,calculated_IGRF,IGRF_local_dec,calculated_mag_dec,core_strike,corrected_bedding_strike
+.1a,mag compass orientation (IGRF corrected),     0,32,26.0,44,17.0,yes,nan,-5.0,2014.0,8.0,1.0,1.0,1.0,1.0,nan,nan,[358.0339131940928; 73.545738036934026; 56507.61290339323],-1.96608680591,insufficient data,30.0,42.0
+.2a,mag compass orientation (IGRF corrected),     0,20,27.0,44,17.0,yes,nan,-5.0,2014.0,8.0,1.0,1.0,1.0,1.0,nan,nan,[358.0339131940928; 73.545738036934026; 56507.61290339323],-1.96608680591,insufficient data,18.0,42.0
+.3a,mag compass orientation (IGRF corrected),     0,120,11.0,44,17.0,yes,nan,-5.0,2014.0,8.0,1.0,1.0,1.0,1.0,nan,nan,[358.0339131940928; 73.545738036934026; 56507.61290339323],-1.96608680591,insufficient data,118.0,42.0
+.4a,mag compass orientation (IGRF corrected),     0,55,17.0,44,17.0,yes,nan,-5.0,2014.0,8.0,1.0,1.0,1.0,1.0,nan,nan,[358.0339131940928; 73.545738036934026; 56507.61290339323],-1.96608680591,insufficient data,53.0,42.0
+.5a,mag compass orientation (IGRF corrected),     0,47,22.0,44,17.0,yes,nan,-5.0,2014.0,8.0,1.0,1.0,1.0,1.0,nan,nan,[358.0339131940928; 73.545738036934026; 56507.61290339323],-1.96608680591,insufficient data,45.0,42.0
+.6a,mag compass orientation (IGRF corrected),     0,34,19.0,44,17.0,yes,nan,-5.0,2014.0,8.0,1.0,1.0,1.0,1.0,nan,nan,[358.0339131940928; 73.545738036934026; 56507.61290339323],-1.96608680591,insufficient data,32.0,42.0
+.7a,mag compass orientation (IGRF corrected),     0,325,19.0,44,17.0,yes,nan,-5.0,2014.0,8.0,1.0,1.0,1.0,1.0,nan,nan,[358.0339131940928; 73.545738036934026; 56507.61290339323],-1.96608680591,insufficient data,323.0,42.0
+.8a,mag compass orientation (IGRF corrected),     0,63,28.0,44,17.0,yes,nan,-5.0,2014.0,8.0,1.0,1.0,1.0,1.0,nan,nan,[358.0339131940928; 73.545738036934026; 56507.61290339323],-1.96608680591,insufficient data,61.0,42.0
+.9a,mag compass orientation (IGRF corrected),     0,87,23.0,44,17.0,yes,nan,-5.0,2014.0,8.0,1.0,1.0,1.0,1.0,nan,nan,[358.0339131940928; 73.545738036934026; 56507.61290339323],-1.96608680591,insufficient data,85.0,42.0
+.10a,mag compass orientation (IGRF corrected),     0,76,18.0,44,17.0,yes,nan,-5.0,2014.0,8.0,1.0,1.0,1.0,1.0,nan,nan,[358.0339131940928; 73.545738036934026; 56507.61290339323],-1.96608680591,insufficient data,74.0,42.0

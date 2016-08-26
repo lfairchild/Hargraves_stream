@@ -1,0 +1,18 @@
+tab 	magic_measurements
+er_citation_names	er_location_name	er_sample_name	er_site_name	er_specimen_name	magic_experiment_name	magic_instrument_codes	magic_method_codes	magic_software_packages	measurement_csd	measurement_dec	measurement_description	measurement_flag	measurement_inc	measurement_magn_moment	measurement_number	measurement_positions	measurement_sd_x	measurement_sd_y	measurement_sd_z	measurement_standard	measurement_temp	treatment_ac_field	treatment_dc_field	treatment_temp
+This study	GB1-	GB1-1	GB1	GB1-1a	GB1-1a:LT-T-Z	hargrave 2016-08-17 19:09:06	LT-T-Z	pmagpy-3.4.0	0.9	25.9	average of multiple measurements	g	58.5	4.400e-06	1	2.0	8.77e-08	1.70e-07	4.83e-08	u	273	0	0	273
+This study	GB1-	GB1-1	GB1	GB1-1a	GB1-1a:LT-T-Z	hargrave 2016-08-19 17:59:00	LT-T-Z	pmagpy-3.4.0	2.1	030.5		g	58.4	4.38e-06	2	1	1.17e-07	9.50e-08	5.12e-08	u	273	0	0	77
+This study	GB1-	GB1-2	GB1	GB1-2a	GB1-2a:LT-T-Z	hargrave 2016-08-17 19:10:45	LT-T-Z	pmagpy-3.4.0	0.1	5.4	average of multiple measurements	g	72.9	4.255e-06	1	2.0	1.30e-07	8.26e-08	4.64e-08	u	273	0	0	273
+This study	GB1-	GB1-2	GB1	GB1-2a	GB1-2a:LT-T-Z	hargrave 2016-08-19 18:00:39	LT-T-Z	pmagpy-3.4.0	2.4	006.2		g	72.8	4.23e-06	2	1	1.48e-07	9.43e-08	4.54e-08	u	273	0	0	77
+This study	GB1-	GB1-3	GB1	GB1-3a	GB1-3a:LT-T-Z	hargrave 2016-08-17 19:12:24	LT-T-Z	pmagpy-3.4.0	0.5	327.2	average of multiple measurements	g	72.2	4.220e-06	1	2.0	1.97e-07	1.07e-07	4.99e-08	u	273	0	0	273
+This study	GB1-	GB1-3	GB1	GB1-3a	GB1-3a:LT-T-Z	hargrave 2016-08-19 18:02:20	LT-T-Z	pmagpy-3.4.0	2.8	329.7		g	72.4	4.22e-06	2	1	1.83e-07	8.42e-08	5.32e-08	u	273	0	0	77
+This study	GB1-	GB1-4	GB1	GB1-4a	GB1-4a:LT-T-Z	hargrave 2016-08-17 19:14:08	LT-T-Z	pmagpy-3.4.0	0.4	61.3	average of multiple measurements	g	54.9	3.520e-06	1	2.0	8.01e-08	6.13e-08	5.51e-08	u	273	0	0	273
+This study	GB1-	GB1-4	GB1	GB1-4a	GB1-4a:LT-T-Z	hargrave 2016-08-19 18:04:03	LT-T-Z	pmagpy-3.4.0	2.9	068.2		g	54.8	3.49e-06	2	1	1.61e-07	5.37e-08	5.81e-08	u	273	0	0	77
+This study	GB1-	GB1-5	GB1	GB1-5a	GB1-5a:LT-T-Z	hargrave 2016-08-17 19:15:56	LT-T-Z	pmagpy-3.4.0	0.1	103.0	average of multiple measurements	g	27.4	3.350e-06	1	2.0	5.64e-08	3.17e-08	7.59e-08	u	273	0	0	273
+This study	GB1-	GB1-5	GB1	GB1-5a	GB1-5a:LT-T-Z	hargrave 2016-08-19 18:05:52	LT-T-Z	pmagpy-3.4.0	2.2	104.0		g	26.9	3.33e-06	2	1	8.48e-08	3.57e-08	9.37e-08	u	273	0	0	77
+This study	GB1-	GB1-6	GB1	GB1-6a	GB1-6a:LT-T-Z	hargrave 2016-08-17 19:17:48	LT-T-Z	pmagpy-3.4.0	0.3	308.4	average of multiple measurements	g	49.6	4.200e-06	1	2.0	1.78e-07	9.49e-08	5.68e-08	u	273	0	0	273
+This study	GB1-	GB1-6	GB1	GB1-6a	GB1-6a:LT-T-Z	hargrave 2016-08-19 18:07:44	LT-T-Z	pmagpy-3.4.0	4.5	306.1		g	49.6	4.16e-06	2	1	2.80e-07	1.63e-07	5.11e-08	u	273	0	0	77
+This study	GB1-	GB1-7	GB1	GB1-7a	GB1-7a:LT-T-Z	hargrave 2016-08-17 19:19:40	LT-T-Z	pmagpy-3.4.0	0.1	198.2	average of multiple measurements	g	-15.8	2.930e-06	1	2.0	2.57e-08	4.12e-08	7.91e-08	u	273	0	0	273
+This study	GB1-	GB1-7	GB1	GB1-7a	GB1-7a:LT-T-Z	hargrave 2016-08-19 18:09:36	LT-T-Z	pmagpy-3.4.0	5.4	202.3		g	-16.7	2.90e-06	2	1	7.39e-08	2.41e-07	1.08e-07	u	273	0	0	77
+This study	GB1-	GB1-8	GB1	GB1-8a	GB1-8a:LT-T-Z	hargrave 2016-08-17 19:21:28	LT-T-Z	pmagpy-3.4.0	0.1	196.0	average of multiple measurements	g	-34.6	2.145e-06	1	2.0	4.54e-08	3.01e-08	6.39e-08	u	273	0	0	273
+This study	GB1-	GB1-8	GB1	GB1-8a	GB1-8a:LT-T-Z	hargrave 2016-08-19 18:11:24	LT-T-Z	pmagpy-3.4.0	2.5	194.0		g	-34.7	2.12e-06	2	1	5.49e-08	3.37e-08	6.61e-08	u	273	0	0	77
