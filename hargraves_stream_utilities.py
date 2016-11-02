@@ -14,6 +14,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from pmagpy.demag_gui_utilities import *
+import mpld3
+from mpld3 import plugins
 
 def magic_write(ofile,Recs,file_type):
     """
@@ -403,11 +405,12 @@ def plotZ(datablock,angle,s,norm):
     function to make Zijderveld diagrams
     """
     amin,amax=0.,-100.
-    fact=1./datablock[0][3]   # normalize to NRM=1
+    fact=1./(datablock[0][3])   # normalize to NRM=1
     if norm==0:fact=1.
     x,y,z=[],[],[]
     xb,yb,zb=[],[],[]
     forVDS=[]
+    labels = []
 # convert to cartesian
     recnum,delta=0,""
     for plotrec in datablock:
@@ -428,7 +431,9 @@ def plotZ(datablock,angle,s,norm):
             if y[-1]<amin:amin=y[-1]
             if z[-1]<amin:amin=z[-1]
             if delta=="":delta=.02*x[-1]
-            if recnum%2==0 and len(x)>0: plt.text(x[-1]-delta,z[-1]+delta,(' '+str(recnum)),fontsize=9)
+            if recnum%2==0 and len(x)>0:
+                # labels.append(' '*3 +str(int(datablock[recnum][0] - 273))+'$\degree$C')
+                plt.text(x[-1]-delta,z[-1]+delta,' '*3 +str(int(datablock[recnum][0] - 273))+'$\degree$C',fontsize=9)
             recnum+=1
         elif len(plotrec)>=6 and plotrec[5]=='b':
           #  zb.append(-rec[2])
@@ -443,7 +448,8 @@ def plotZ(datablock,angle,s,norm):
             if yb[-1]<amin:amin=yb[-1]
             if zb[-1]<amin:amin=zb[-1]
             if delta=="":delta=.02*xb[-1]
-            plt.text(xb[-1]-delta,zb[-1]+delta,(' '+str(recnum)),fontsize=9)
+            # labels.append(' '*3 +str(int(datablock[recnum][0] - 273))+'$\degree$C')
+            plt.text(xb[-1]-delta,zb[-1]+delta,' '*3 + str(int(datablock[recnum][0] - 273))+'$\degree$C',fontsize=9)
             recnum+=1
 # plotting stuff
     if angle !=0:tempstr= "\n Declination rotated by: "+str(angle)+'\n'
@@ -456,22 +462,30 @@ def plotZ(datablock,angle,s,norm):
         plt.scatter(xb,zb,marker='d',c='w',s=30)
     plt.plot(x,y,'r')
     plt.plot(x,z,'b')
-    plt.scatter(x,y,marker='o',c='r')
-    plt.scatter(x,z,marker='s',c='w')
+    dec_points = plt.scatter(x,y,marker='o',c='r')
+    inc_points = plt.scatter(x,z,marker='s',c='w')
     xline=[amin,amax]
    # yline=[-amax,-amin]
     yline=[amax,amin]
     zline=[0,0]
-    plt.plot(xline,zline)
-    plt.plot(zline,xline)
-    if angle!=0:xlab="X: rotated to Dec = "+'%7.1f'%(angle)
-    if angle==0:xlab="X: rotated to Dec = "+'%7.1f'%(angle)
-    plt.xlabel(xlab)
-    plt.ylabel("Circles: Y; Squares: Z")
+    plt.plot(xline,zline, c='k')
+    plt.plot(zline,xline, c='k')
+    # if angle!=0:xlab="X: rotated to Dec = "+'%7.1f'%(angle)
+    # if angle==0:xlab="X: rotated to Dec = "+'%7.1f'%(angle)
+    # plt.xlabel(xlab)
+    # plt.ylabel("Circles: Y; Squares: Z")
     tstring=s+': NRM = '+'%9.2e'%(datablock[0][3])
     plt.axis([amin,amax,amax,amin])
     plt.axis("equal")
+    plt.axis('off')
+    plt.tight_layout()
     plt.title(tstring)
+    # tooltip_dec = plugins.PointHTMLTooltip(dec_points, labels, voffset=10, hoffset=10)
+    # tooltip_inc = plugins.PointHTMLTooltip(inc_points, labels, voffset=10, hoffset=10)
+    # plugins.connect(plt.gcf(), tooltip_dec)
+    # plugins.connect(plt.gcf(), tooltip_inc)
+    # mpld3.enable_notebook()
+
 
 def plotMT(datablock,s,num,units,norm):
     Ints=[]
@@ -524,7 +538,7 @@ def plotMT(datablock,s,num,units,norm):
             for el in rec: recbak.append(el)
             delta=.02*M[0]
             if num==1:
-                if recnum%2==0: plt.text(T[-1]+delta,M[-1],(' '+str(recnum)),fontsize=9)
+                if recnum%2==0: plt.text(T[-1]+delta,M[-1],' '*3 + str(int(datablock[recnum][0] - 273))+'$\degree$C',fontsize=9)
             recnum+=1
         else:
             if rec[0]<200:Tex.append(rec[0]*1e3)
@@ -678,9 +692,9 @@ def read_inp(inp_file_name, full_sam_path='.'):
         if format == "CIT":
             CIT_kwargs = {}
             CIT_name = update_dict["sam_path"].split("/")[-1].split(".|-")[0]
-            print CIT_name
+            # print CIT_name
 #             os.mkdir(os.path.abspath(os.path.dirname(inp_file_name)) + '/.tmp/')
-            CIT_kwargs["dir_path"] = os.path.abspath(os.path.dirname(inp_file_name))# + '/.tmp/'
+            CIT_kwargs["dir_path"] = os.path.abspath(os.path.dirname(full_sam_path))# + '/.tmp/'
             CIT_kwargs["user"] = ""
             CIT_kwargs["meas_file"] = CIT_name + ".magic"
             CIT_kwargs["spec_file"] = CIT_name + "_er_specimens.txt"
@@ -716,9 +730,12 @@ def read_inp(inp_file_name, full_sam_path='.'):
     er_sites = pd.read_csv(StringIO(er_sites_str), sep='\t', skiprows=1)
     magic_measurements = pd.read_csv(StringIO(magic_measurements_str), sep='\t', skiprows=1)
 
+    return er_specimens, er_sites, er_samples, magic_measurements
+
+
 #     out_file = open(inp_file_name, "w")
 #     out_file.write(new_inp_file)
-    return update_data, er_specimens, er_sites, er_samples, magic_measurements
+    # return update_data, er_specimens, er_sites, er_samples, magic_measurements
 
 def plot_net():
     Dcirc=np.arange(0,361.)
@@ -764,6 +781,7 @@ def plot_net():
         plt.plot(Xtick,Ytick,'k')
     plt.axis("equal")
     plt.axis((-1.05,1.05,-1.05,1.05))
+    plt.tight_layout()
 
 def do_help():
     return main.__doc__
